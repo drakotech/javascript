@@ -51,9 +51,10 @@ function ageVerification(age) {
   A ternary operator is a way to have a conditional expression
   all on one line.
 
-  Syntax is: expression ? block to run if true : block to run if false
+  Syntax is: expression ? run if true : run if false;
 
-  Ternary operators also support nested conditionals as seen above.
-  
+  Ternary operators also support nested conditionals as seen 
+  above.
+
 
   */
