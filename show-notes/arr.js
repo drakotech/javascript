@@ -1,3 +1,6 @@
+//How to Create Arrays in JavaScript
+
+
 var generatedArray = new Array(3); 
 // [undefined, undefined, undefined]
 

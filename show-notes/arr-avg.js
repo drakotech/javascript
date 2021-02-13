@@ -1,3 +1,6 @@
+//How to Get the Average from an Array in JavaScript
+
+
 const getAverage = arr => {
     // Sum the values from the array
     const reducer = (total, currentValue) => total + currentValue;
