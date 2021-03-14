@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>API Communication Demo</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script>
+    // Integrating Error Management into API Calls in JavaScript
+    
+
+    class ApiError extends Error {
+      constructor(msg = 'An api error occurred', ...params) {
+        super(...params);
+
+        this.msg = msg;
+      }
+    }
+    
+    var request = new XMLHttpRequest();
+    // Creates new XMLHttpRequest and stores it in request
+
+
+    request.open('GET', 'http://api.dailysmarty.com/oops', true);
+    // Opens the request with an action word, in this case GET, the
+    // API call URL - sic with 'oops', and third a boolean 
+    // expression declaring if we want it to be asynchronous or not.
+    request.onload = function() {
+      // Implementing the onload function when we are receiving the
+      // data we want to implement a conditional.
+      if (request.status >= 200 && request.status < 400) {
+        //If we get returned anything less than a 200 http status
+        //code then everything worked properly, anything from 
+        //200-400 essentially means it worked, not perfectly but it
+        //was able to communicate with an outside service.
+        //
+        //anything above 400 is an error.
+        //
+        var data = JSON.parse(request.responseText);
+        //Querying the URL then as long as there are no errors,
+        //I want you to take in these parameters and parse as json
+        console.log(data);
+        //Log the request data to the console
+      } else {
+        //If there was an error
+        throw new ApiError('ApiError', `An API error occurred with a status code of ${request.status}`);
+      }
+    }
+    
+    request.send();
+  </script>
+</html>

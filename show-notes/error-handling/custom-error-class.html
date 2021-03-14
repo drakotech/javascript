@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Error Management in JavaScript</title>
+  </head>
+  <body>
+  </body>
+
+  <script>
+    // How to Create a Custom Error Class in JavaScript
+
+
+    class DevcampError extends Error {
+      constructor(msg = 'An error occurred', ...params) {
+        super(...params);
+
+        this.msg = msg;
+      }
+    }
+
+
+    function siteComponent(func) {
+      return func();
+    }
+
+    try {
+      console.log(siteComponent('oops'));
+    } catch(e) {
+    //console.log(siteComponent('An error occurred', e));
+      throw new DevcampError('DevcampError', 'My Custom Error Goes Here');
+    }
+
+    widget = () => {
+      return '<div>Hi there</div>';
+    }
+
+
+    /*
+      Notes: 
+
+      This example displays the use of a constructor to build a 
+      custom error class to thow specific errors. 
+      
+      Inside the constructor you are free to have functions to
+      complete any task such as sending an email every time 
+      a server connection drops.
+
+
+      Coding Exercise
+
+      Write a class called SocialMediaError that extends Error.
+      It will also need a constructor with 2 arguments, one for
+      the msg and the params. (Don't worry about writing the try
+      and catch, etc. Just write the class).
+
+
+      Solution: 
+      
+      class SocialMediaError extends Error {
+          constructor(msg, ...params){
+              super(...params);
+              
+              this.msg = msg;
+            }
+        }
+        
+    */
+  </script>
