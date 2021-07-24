@@ -1,0 +1,55 @@
+<!-- How to Add and Remove CSS Styles in Vanilla JavaScript -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+
+  <style>
+    img {
+      width: 400px;
+    }
+    .site-img {
+      border: 0px 40px 0px 0px solid transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class='container'>
+    <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/laptop.jpg" class="site-img" alt="Laptop">
+  </div>
+</body>
+
+<script>
+  const laptop = document.querySelector('.site-img');
+
+  laptop.addEventListener('mouseover', (e) => {
+    e.target.style.borderRight = '40px solid red';
+  });
+
+  laptop.addEventListener('mouseout', (e) => {
+    e.target.style.borderRight = '40px solid transparent';
+  });
+</script>
+</html>
+<!-- 
+  Javascript cannot have the dash in the style calls so therefore
+  it has its own library of camel case style calls.
+
+  In the example above border-right is replaced with borderRight.
+
+
+  Coding Exercise
+
+  We need to add a margin of 20px to the div below but some of the
+  code is missing. Fix the JavaScript to properly select the div
+  and add 20px.
+
+  <div id="target">Add 20px to my margin</div>
+
+  Solution
+
+  let card = document.getElementById('target');
+  card.style.margin = "20px";
+
+ -->
