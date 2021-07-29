@@ -1,0 +1,64 @@
+<!-- How to Build a Character Countdown Function in JavaScript -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+<body>
+  <input type="text" class="msgInput">
+
+  <div>
+    Characters left <span class="msgCounter">144</span>
+  </div>
+</body>
+
+<script>
+    const msgInput = document.querySelector('.msgInput');
+    const msgCounter = document.querySelector('.msgCounter');
+    const max = 144;
+
+    // Ensure character count
+    const ensureContentLength = (content, max) => {
+        if (content.length > max) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // Event listener watch for keyup
+    msgInput.onkeyup = function() {
+        msgCounter.innerHTML = max - this.value.length;
+
+        if (!ensureContentLength(this.value, (max - 1))) {
+            msgInput.disabled = true;
+        }
+    }
+</script>
+</html>
+<!-- 
+    The reason why on line 31 that we need to use a regular
+    function expression is because an arrow function would
+    change the scope of the 'this' keyword in function resulting 
+    in an error that it cannot read the length of undefined. 
+
+
+    Coding Exercise
+
+    Using what you've learned so far, insert the quote 
+    "Innovation distinguishes between a leader and a follower"
+    into the first div. Then insert the name of the author 
+    ("Steve Jobs") into the second div.
+
+    <div id="quote"></div>
+    <div id="author"></div>
+
+    Solution
+    const quote = document.getElementById('quote');
+    const author = document.getElementById('author');
+
+    quote.innerHTML = "Innovation distinguishes between a leader and a follower";
+    author.innerHTML = "Steve Jobs";
+
+ -->
