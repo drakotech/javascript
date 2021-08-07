@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to UML Components and Common Elements</title>
+</head>
+<body>
+    <h1>Introduction to UML Components and Common Elements</h1>
+    
+    <p>
+        These are not the diagrams themselves, these are just some 
+        common elements that you’ll see are shared across various 
+        diagrams.
+    </p>
+    <p>
+        The six common elements are we’re going to walk through 
+        are:
+    </p>
+    <p><b>
+        Frames<br>
+        Classifiers<br>
+        Stereotypes<br>
+        Comments<br>
+        Dependencies<br>
+        Features (which are also called Properties)<br>
+    </b></p>
+
+
+    <h3>Frames</h3>
+
+    <h4>
+        Frames help you encapsulate your view components. 
+        Essentially, what frames do is provide context.
+    </h4>
+
+    <p>
+        You want to instantly be able to look at a model and know 
+        what it's supposed to do.
+    </p>
+    <p>You want to know a couple of things:</p>
+    <p>You want to know exactly what type of system it represents.</p>
+    <p>You want to know what type of diagram it is</p>
+
+    <img src="img/Frames.png" alt="Frames" width="600px">
+
+    <p>Diagram mapping for frames has a standarized naming convention</p>
+    <img src="img/Frames1.png" alt="Frames 1" width="600px">
+
+    <p>An example of a Use Case diagram with a frame tagged in the top left</p>
+    <img src="img/Frames2.png" alt="Frames 2" width="600px">
+
+    <p>
+        The important part to look at is in the top left-hand side, 
+        you see where it says UC SongRequest and then it's wrapping 
+        the entire thing in a box. What this allows me as a developer 
+        to see is if someone else's software engineer brings me this 
+        diagram I can instantly tell that this is a use case diagram 
+        because of the little UC in the top left-hand side. I know 
+        that it is a use case diagram for the SongRequest module so 
+        I'm going to know exactly where this needs to be implemented 
+        in the application. I also will know how to interpret the 
+        diagram.
+    </p>
+    <p>This is how you can build a frame in UML.</p>
+
+
+    <h3>Classifiers</h3>
+
+    <p>
+        Classifiers allow us to identify components. One thing that
+        can be a little bit tricky when you're starting to use UML 
+        is that classifiers are technically abstract.
+    </p>
+    <p>
+        You are going to be using classifiers throughout the 
+        entire course and throughout your entire career as long as 
+        you're using UML. Essentially, what they do is exactly what 
+        the name implies, they classify items. It's high level, it 
+        allows you to have a standardized naming convention as you 
+        start building out your designs. Also as developers are 
+        reading your designs, they are going to be using 
+        classifiers as the application is built.
+    </p>
+
+    <img src="img/Classifiers.png" alt="Classifiers" width="600px">
+
+    <p>
+        So what are some different components and diagrams that 
+        use classifiers?
+    </p>
+
+    <img src="img/Classifiers1.png" alt="Classifiers Used By" width="600px">
+
+    <p>
+        They're used by pretty much every diagram that you're going 
+        to implement. It means that this is the high-level name, 
+        make sure to not get it confused with a class diagram. I 
+        have seen a number of different forum posts and questions 
+        from students asking if a class is a class diagram is the 
+        same as a classifier and no it is not. A classifier is 
+        simply a way of titling your different UML components and 
+        diagrams, it allows you to have one kind of standardized 
+        approach.
+    </p>
+    <p>
+        An example is here in a class diagram where you see "Topic" 
+        on the right-hand side. That is the name of the class and 
+        that is the classifier for the class diagram. If you are doing 
+        this in a Use Case Diagram, like we'll get into later in the 
+        course, when you name that Use Case Diagram and you name the 
+        different elements that are associated whether it's a topic or 
+        a blog post or anything like that, those are the classifiers.
+    </p>
+    <img src="img/Classifiers2.png" alt="Example Classifiers" width="600px">
+</body>
+</html>
